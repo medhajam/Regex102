@@ -1,0 +1,10 @@
+@url=https://localhost:7238
+
+POST {{url}}/Regex/Substitute
+Content-Type: application/json
+
+{
+  "input": "My phone number is 12345",
+  "pattern": "\\d+",
+  "replacement": "*****"
+}

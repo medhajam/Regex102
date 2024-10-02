@@ -1,0 +1,29 @@
+@host=https://localhost:7238
+
+POST {{host}}/Regex/Match
+Content-Type: application/json
+
+{
+    "pattern": "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$",
+    "input": "Hello Word"
+}
+
+###
+
+POST {{host}}/Regex/Match
+Content-Type: application/json
+
+{
+    "pattern": "IsMatch",
+    "input": "IsMatch"
+}
+
+###
+
+POST {{host}}/Regex/Match
+Content-Type: application/json
+
+{
+    "pattern": "[invalid",
+    "input": "test exception"
+}
