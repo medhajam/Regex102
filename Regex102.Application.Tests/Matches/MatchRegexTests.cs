@@ -7,12 +7,6 @@ namespace Regex102.Application.Tests.Matches
 {
     public class MatchRegexTests
     {
-        private readonly MatchRegex _regexMatcher;
-
-        public MatchRegexTests()
-        {
-            _regexMatcher = new MatchRegex();
-        }
 
         [Fact]
         public void IsMatch_WithValidPattern_ReturnsTrue()
@@ -20,6 +14,22 @@ namespace Regex102.Application.Tests.Matches
             // Arrange
             var input = "Hello World";
             var pattern = "Hello";
+            var _regexMatcher = new MatchRegex();
+
+            // Act
+            var result = _regexMatcher.IsMatch(input, pattern);
+
+            // Assert
+            Assert.True(result);
+        }
+
+        [Fact]
+        public void IsMatch_WithUnMatcheddPattern_ReturnsFalse()
+        {
+            // Arrange
+            var input = "No Match";
+            var pattern = "Hello";
+            var _regexMatcher = new MatchRegex();
 
             // Act
             var result = _regexMatcher.IsMatch(input, pattern);
@@ -34,6 +44,7 @@ namespace Regex102.Application.Tests.Matches
             // Arrange
             var input = "Hello World";
             var pattern = "Hello(";
+            var _regexMatcher = new MatchRegex();
 
             // Act
             void act() => _regexMatcher.IsMatch(input, pattern);
