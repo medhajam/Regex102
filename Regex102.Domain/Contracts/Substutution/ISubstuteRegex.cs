@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Regex102.Domain.Contracts.Substutution
 {
-    public interface IRegexSubstutor
+    public interface ISubstuteRegex
     {
         string Replace(string input, string pattern, string replacement);
     }

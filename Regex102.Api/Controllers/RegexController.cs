@@ -19,9 +19,9 @@ namespace Regex102.Api.Controllers
             _logger = logger;
         }
 
-
+        [ProducesResponseType(StatusCodes.Status200OK)]
         [HttpPost("Substitute")]
-        public async Task <IActionResult> SubstituteRegex([FromBody] SubstituteRegexQuery query)
+        public async Task <ActionResult<string>> SubstituteRegex([FromBody] SubstituteRegexQuery query)
         {
             var result = await _mediator.Send(query);
             return Ok(result);
@@ -30,6 +30,14 @@ namespace Regex102.Api.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [HttpPost("Match")]
         public async Task<ActionResult<bool>> MatchRegex([FromBody] MatchRegexQuery query)
+        {
+            var result = await _mediator.Send(query);
+            return Ok(result);
+        }
+
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [HttpPost("MatchWithOptions")]
+        public async Task<ActionResult<bool>> MatchRegexWithOptions([FromBody] MatchRegexWithOptionsQuery query)
         {
             var result = await _mediator.Send(query);
             return Ok(result);

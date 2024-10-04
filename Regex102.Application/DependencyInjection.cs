@@ -12,8 +12,9 @@ namespace Regex102.Application
         public static IServiceCollection AddApplication(this IServiceCollection services)
         {
             services.AddMediatR(typeof(DependencyInjection).Assembly);
-            services.AddScoped<IRegexMatcher, MatchRegex>();
-            services.AddScoped<IRegexSubstutor, SubstituteRegex>();
+            services.AddScoped<IMatchRegex, MatchRegex>();
+            services.AddScoped<ISubstuteRegex, SubstituteRegex>();
+            services.AddScoped<IMatchRegexWithOptions, MatchRegexWithOptions>();
             return services;
         }
     }

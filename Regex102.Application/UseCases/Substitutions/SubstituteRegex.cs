@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Regex102.Application.UseCases.Substitutions
 {
-    public class SubstituteRegex : IRegexSubstutor
+    public class SubstituteRegex : ISubstuteRegex
     {
         private readonly ILogger<SubstituteRegex> _logger;
 

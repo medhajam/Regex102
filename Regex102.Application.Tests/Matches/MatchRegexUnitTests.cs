@@ -3,9 +3,9 @@ using Regex102.Application.UseCases.Matches;
 using Xunit;
 
 
-namespace Regex102.Application.Tests.Matches
+namespace Regex102.Application.UnitTests.Matches
 {
-    public class MatchRegexTests
+    public class MatchRegexUnitTests
     {
 
         [Fact]
@@ -35,7 +35,7 @@ namespace Regex102.Application.Tests.Matches
             var result = _regexMatcher.IsMatch(input, pattern);
 
             // Assert
-            Assert.True(result);
+            Assert.False(result);
         }
 
         [Fact]

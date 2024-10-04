@@ -4,7 +4,7 @@ using System.Text.RegularExpressions;
 
 namespace Regex102.Application.UseCases.Matches
 {
-    public class MatchRegex : IRegexMatcher
+    public class MatchRegex : IMatchRegex
     {
         public bool IsMatch(string input, string pattern)
         {

@@ -11,9 +11,9 @@ namespace Regex102.Application.UseCases.Matches.QueriesHandlers
 {
     public class MatchRegexQueryHandler : IRequestHandler<MatchRegexQuery, bool>
     {
-        private readonly IRegexMatcher _regexMatcher;
+        private readonly IMatchRegex _regexMatcher;
 
-        public MatchRegexQueryHandler(IRegexMatcher regexMatcher)
+        public MatchRegexQueryHandler(IMatchRegex regexMatcher)
         {
             _regexMatcher = regexMatcher;
         }

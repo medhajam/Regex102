@@ -6,9 +6,9 @@ namespace Regex102.Application.UseCases.Substitutions.QueriesHandlers
 {
     public class SubstituteRegexQueryHandler : IRequestHandler<SubstituteRegexQuery, string>
     {
-        private readonly IRegexSubstutor _regexSubstutor;
+        private readonly ISubstuteRegex _regexSubstutor;
 
-        public SubstituteRegexQueryHandler(IRegexSubstutor regexSubstutor)
+        public SubstituteRegexQueryHandler(ISubstuteRegex regexSubstutor)
         {
             _regexSubstutor = regexSubstutor;
         }
